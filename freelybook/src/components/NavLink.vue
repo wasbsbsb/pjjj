@@ -1,7 +1,7 @@
 <template>
   <div class="NavLink">
     <div class="linkTO" v-for="item in HeaderLink" :key="item.name">
-      <div @click="onClick" v-bind="item.name">
+      <div @click="onClick($event)">
         <router-link class="linkToA" :to="item.linkPath" v-text="item.name"></router-link>
       </div>
     </div>
@@ -36,8 +36,10 @@ export default {
   },
 
   methods: {
-    onClick() {
-        
+    onClick(e) {
+      window.console.log(e);
+
+      window.console.log(this.HeaderLink);
     }
   },
 
@@ -45,7 +47,6 @@ export default {
 };
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 .NavLink {
   height: 40px;
