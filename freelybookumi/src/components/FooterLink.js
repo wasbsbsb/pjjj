@@ -24,8 +24,11 @@ class FooterLink extends react.Component {
             name: '我的博库',
             rLink: '/Myboku'
         },
+        {
+            name: '注册',
+            rLink: '/Regin'
+        },
     ]
-
 
     render() {
         return (
